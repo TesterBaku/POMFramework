@@ -44,5 +44,37 @@ public class ExcelUtil {
 		return data;
 
 	}
+	
+	public static String getExcelProp(String sheetName, String key) {
+		
+		String value = null;
+		String temp = null;
+		
+		try {
+			FileInputStream ip = new FileInputStream(TEST_DATA_SHEET_PATH);
+			book = WorkbookFactory.create(ip);
+			sheet = book.getSheet(sheetName);
+			
+			for(int i = 0; i < sheet.getRow(0).getLastCellNum(); i++) {
+				temp = sheet.getRow(0).getCell(i).toString();
+				if(temp.equalsIgnoreCase(key)) {
+					value = sheet.getRow(1).getCell(i).toString();
+					break;
+				}
+			}	
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (InvalidFormatException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return value;
+	}
 
 }

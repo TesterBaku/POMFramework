@@ -18,7 +18,7 @@ public class LoginPage extends BasePage {
 	By emailId = By.id("username");
 	By password = By.id("password");
 	By loginButton = By.id("loginBtn");
-	By signUpLink = By.linkText("Sign up111");
+	By signUpLink = By.linkText("Sign up");
 
 	// constructor of the page class:
 	public LoginPage(WebDriver driver) {

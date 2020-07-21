@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 import com.qa.hubspot.base.BaseTest;
 import com.qa.hubspot.pages.HomePage;
 import com.qa.hubspot.utils.Constants;
+import com.qa.hubspot.utils.ExcelUtil;
 
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
@@ -23,6 +24,7 @@ public class HomePageTest extends BaseTest{
 	@BeforeClass
 	public void homePageSetup(){
 		homePage = loginPage.doLogin(prop.getProperty("username"), prop.getProperty("password"));
+//		homePage = loginPage.doLogin(ExcelUtil.getExcelProp("login", "username"), ExcelUtil.getExcelProp("login", "password"));
 	}
 	
 	@Description("verify Title Test on home page....")

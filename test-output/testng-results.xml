@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="1" ignored="0" total="3" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Hub spot Test automtion regression suite" duration-ms="33909" started-at="2020-07-16T15:22:44Z" finished-at="2020-07-16T15:23:18Z">
+  <suite name="Hub spot Test automtion regression suite" duration-ms="27025" started-at="2020-07-21T18:39:09Z" finished-at="2020-07-21T18:39:36Z">
     <groups>
     </groups>
-    <test name="HubSpot Feature Testing - login" duration-ms="33909" started-at="2020-07-16T15:22:44Z" finished-at="2020-07-16T15:23:18Z">
+    <test name="HubSpot Feature Testing - login" duration-ms="27025" started-at="2020-07-21T18:39:09Z" finished-at="2020-07-21T18:39:36Z">
       <class name="com.qa.hubspot.tests.LoginPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.hubspot.tests.LoginPageTest@214894fc]" name="setUp" is-config="true" duration-ms="16151" started-at="2020-07-16T15:22:44Z" finished-at="2020-07-16T15:23:01Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.hubspot.tests.LoginPageTest@e362c57]" name="setUp" is-config="true" duration-ms="8324" started-at="2020-07-21T18:39:09Z" finished-at="2020-07-21T18:39:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="verifySignUpLinkTest()[pri:1, instance:com.qa.hubspot.tests.LoginPageTest@214894fc]" name="verifySignUpLinkTest" duration-ms="15408" started-at="2020-07-16T15:23:01Z" finished-at="2020-07-16T15:23:16Z">
+        <test-method status="FAIL" signature="verifySignUpLinkTest()[pri:1, instance:com.qa.hubspot.tests.LoginPageTest@e362c57]" name="verifySignUpLinkTest" duration-ms="15261" started-at="2020-07-21T18:39:18Z" finished-at="2020-07-21T18:39:33Z">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
@@ -49,15 +49,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifySignUpLinkTest -->
-        <test-method status="PASS" signature="verifyLoginPageTitleTest()[pri:2, instance:com.qa.hubspot.tests.LoginPageTest@214894fc]" name="verifyLoginPageTitleTest" duration-ms="74" started-at="2020-07-16T15:23:17Z" finished-at="2020-07-16T15:23:17Z">
+        <test-method status="PASS" signature="verifyLoginPageTitleTest()[pri:2, instance:com.qa.hubspot.tests.LoginPageTest@e362c57]" name="verifyLoginPageTitleTest" duration-ms="71" started-at="2020-07-21T18:39:35Z" finished-at="2020-07-21T18:39:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLoginPageTitleTest -->
-        <test-method status="PASS" signature="loginTest()[pri:3, instance:com.qa.hubspot.tests.LoginPageTest@214894fc]" name="loginTest" duration-ms="686" started-at="2020-07-16T15:23:17Z" finished-at="2020-07-16T15:23:18Z">
+        <test-method status="PASS" signature="loginTest()[pri:3, instance:com.qa.hubspot.tests.LoginPageTest@e362c57]" name="loginTest" duration-ms="957" started-at="2020-07-21T18:39:35Z" finished-at="2020-07-21T18:39:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.hubspot.tests.LoginPageTest@214894fc]" name="tearDown" is-config="true" duration-ms="696" started-at="2020-07-16T15:23:18Z" finished-at="2020-07-16T15:23:18Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.hubspot.tests.LoginPageTest@e362c57]" name="tearDown" is-config="true" duration-ms="761" started-at="2020-07-21T18:39:36Z" finished-at="2020-07-21T18:39:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
