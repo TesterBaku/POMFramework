@@ -28,6 +28,7 @@
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
+					<executable>C:\Program Files\Java\jdk1.8.0_231\bin\javac</executable> 
 				</configuration>
 			</plugin>
 
