@@ -17,14 +17,23 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class ElementUtil {
+import com.qa.hubspot.base.BasePage;
+
+public class ElementUtil extends BasePage{
 
 	private WebDriver driver;
+	JavaScriptUtil jsUtil;
 
 	public ElementUtil(WebDriver driver) {
 		this.driver = driver;
+		jsUtil = new JavaScriptUtil(this.driver);
 	}
 
+	public List<WebElement> getElements(By locator) {
+		List<WebElement> elementsList = driver.findElements(locator);
+		return elementsList;
+	}
+	
 	/**
 	 * this is used to create the webelement on the basis of by locator
 	 * @param locator
@@ -33,7 +42,12 @@ public class ElementUtil {
 	public WebElement getElement(By locator) {
 		WebElement element = null;
 		try {
+			System.out.println("locator is: " + locator);
 			element = driver.findElement(locator);
+			if(prop.getProperty("highlight").equalsIgnoreCase("yes")){
+				jsUtil.flash(element);	
+			}
+			System.out.println("WebElement is created successfully: " + locator);
 		} catch (Exception e) {
 			System.out.println("element could not be created..." + locator);
 		}
@@ -46,14 +60,17 @@ public class ElementUtil {
 	}
 	
 	public void doSendKeys(By locator, String value){
+		waitForElementPresent(locator, 10);
 		getElement(locator).sendKeys(value);
 	}
 	
 	public String doGetText(By locator){
+		waitForElementPresent(locator, 10);
 		return getElement(locator).getText();
 	}
 	
 	public boolean doIsDisplayed(By locator){
+		waitForElementPresent(locator, 10);
 		return getElement(locator).isDisplayed();
 	}
 	
