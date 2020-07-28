@@ -44,7 +44,7 @@ public class ElementUtil extends BasePage{
 		try {
 			System.out.println("locator is: " + locator);
 			element = driver.findElement(locator);
-			if(prop.getProperty("highlight").equalsIgnoreCase("yes")){
+			if(Boolean.parseBoolean(prop.getProperty("highlight"))){
 				jsUtil.flash(element);	
 			}
 			System.out.println("WebElement is created successfully: " + locator);
