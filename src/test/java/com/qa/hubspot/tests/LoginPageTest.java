@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 import com.qa.hubspot.base.BaseTest;
 import com.qa.hubspot.testlisteners.TestAllureListener;
 import com.qa.hubspot.utils.Constants;
+import com.qa.hubspot.utils.JiraPolicy;
 
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
@@ -25,6 +26,10 @@ public class LoginPageTest extends BaseTest{
 	// @BeforeTest ---> @Test --Assertions --> @AfterTest
 	// launchBrowser, url --- > title test --> close the browser
 
+
+	//I need to modify this so that to pass flag prop properties file
+	//This should be used carefully because you don't need to raise bugs which are caused by automation script
+	@JiraPolicy(logTicketReady = false)
 	@Description("verify sign up link on login page...")
 	@Severity(SeverityLevel.CRITICAL)
 	@Test(priority=1)
@@ -32,6 +37,7 @@ public class LoginPageTest extends BaseTest{
 		Assert.assertEquals(loginPage.isSignUpLinkExist(), true);
 	}
 
+	@JiraPolicy(logTicketReady = false)
 	@Description("verify login page title login page...")
 	@Severity(SeverityLevel.NORMAL)
 	@Test(priority=2)
@@ -42,6 +48,7 @@ public class LoginPageTest extends BaseTest{
 		Assert.assertEquals(title, Constants.LOGIN_PAGE_TITLE);
 	}
 
+	@JiraPolicy(logTicketReady = false)
 	@Description("verify user is able to login page...")
 	@Severity(SeverityLevel.BLOCKER)
 	@Test(priority=3)

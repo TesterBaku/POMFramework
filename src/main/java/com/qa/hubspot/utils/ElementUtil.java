@@ -3,6 +3,7 @@ package com.qa.hubspot.utils;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 import java.util.function.Function;
 
 import org.openqa.selenium.Alert;
@@ -27,6 +28,7 @@ public class ElementUtil extends BasePage{
 	public ElementUtil(WebDriver driver) {
 		this.driver = driver;
 		jsUtil = new JavaScriptUtil(this.driver);
+		init_prop();
 	}
 
 	public List<WebElement> getElements(By locator) {

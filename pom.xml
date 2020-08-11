@@ -150,6 +150,13 @@
 			<version>1.9.5</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/net.rcarz/jira-client -->
+		<dependency>
+			<groupId>net.rcarz</groupId>
+			<artifactId>jira-client</artifactId>
+			<version>0.5</version>
+		</dependency>
+
 
 	</dependencies>
 </project>
