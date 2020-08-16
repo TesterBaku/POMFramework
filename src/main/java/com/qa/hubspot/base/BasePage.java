@@ -28,7 +28,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class BasePage {
 
 	public WebDriver driver;
-	public Properties prop;
+	public static Properties prop;
 	public OptionsManager optionsManager;
 	
 	public static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<WebDriver>();
@@ -122,7 +122,7 @@ public class BasePage {
 	 * this method is used to initialize the properties from config.properties file
 	 * @return prop
 	 */
-	public Properties init_prop() {
+	public static Properties init_prop() {
 		prop = new Properties();
 		String path = null;
 		String env = null;

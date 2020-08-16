@@ -1,5 +1,7 @@
 package com.qa.hubspot.tests;
 
+import java.sql.SQLException;
+
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
